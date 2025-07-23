@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<robot name="heale" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Rubber Wheel Macro -->
+  <xacro:macro name="roller" params="frnt_or_bk lft_or_rght number x z r p y">
+
+    <!-- Rubber Wheel link -->
+    <link name="{frnt_or_bk}_${lft_or_rght}_${number}_roller">
+      <inertial>
+        <origin xyz="-9.3675E-17 -1.0686E-15 1.3045E-15" rpy="0 0 0" />
+        <mass value="0.0052688" />
+        <inertia
+          ixx="7.0476E-07" ixy="-5.6311E-09" ixz="5.6325E-09"
+          iyy="4.4776E-07" iyz="2.5718E-07" izz="4.4764E-07" />
+      </inertial>
+
+      <visual>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <geometry>
+            <!-- <sphere radius="0.01016433"/> -->
+            <!-- <cylinder radius="0.01016433" length="0.05332" /> -->
+          <mesh filename="package://mecanum_description/meshes/roller.STL" />
+        </geometry>
+        <material name="blue">
+          <color rgba="0.2 0.2 1 1"/>
+        </material>
+      </visual>
+
+      <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <geometry>
+            <!-- <sphere radius="0.01016433"/> -->
+          <mesh filename="package://mecanum_description/meshes/roller.STL" />
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="{frnt_or_bk}_${lft_or_rght}_${number}_dummy_roller">
+    </link>
+
+    <joint name="${frnt_or_bk}_${lft_or_rght}_${number}_dummy_roller_joint" type="fixed">
+      <origin rpy="0 ${y} 0" xyz="${x} 0 ${z}" />
+      <parent link="${frnt_or_bk}_${lft_or_rght}_wheel"/> 
+      <child link="{frnt_or_bk}_${lft_or_rght}_${number}_dummy_roller"/>
+    </joint>
+
+    <!-- Joint -->
+    <joint name="${frnt_or_bk}_${lft_or_rght}_${number}_roller_joint" type="continuous">
+      <origin rpy="0 0 ${p}" xyz="0 0 0" />
+      <parent link="{frnt_or_bk}_${lft_or_rght}_${number}_dummy_roller"/> 
+      <child link="{frnt_or_bk}_${lft_or_rght}_${number}_roller"/>
+      <axis xyz="0 1 0" />
+    </joint>
+
+    <!-- Gazebo plugin params -->
+    <gazebo reference="{frnt_or_bk}_${lft_or_rght}_${number}_roller">
+      <mu1>1e14</mu1>
+      <mu2>1e14</mu2>
+      <kp>1e12</kp>
+      <kd>10.0</kd>
+      <minDepth>0.001</minDepth>
+      <maxVel>0.1</maxVel>
+      <fdir1>0 1 0</fdir1>
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>

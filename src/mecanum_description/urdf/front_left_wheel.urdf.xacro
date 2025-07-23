@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<robot name="heale" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Include Gazebo plugins *********************************************************************** -->
+    <xacro:include filename="parent_wheel.xacro"/>
+
+    <!-- Include Gazebo plugins *********************************************************************** -->
+    <xacro:include filename="rubber_wheel.xacro"/>
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:wheel front_or_back="front" left_or_right="left" x="0.1994" y="0.20539" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="1"  ox="-0.04174" oy="0.0" oz="0.00091413" roll="1.5708" pitch="0" yaw="0" ax="0.015482" ay="-0.70694" az="0.70711" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="2"  ox="-0.033231" oy="0.0" oz="0.025274" roll="1.5708 " pitch="0" yaw="0" ax="-0.42805" ay="-0.56282" az="0.70711" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="3"  ox="-0.012029" oy="0.0" oz="0.03998" roll="1.5708" pitch="0" yaw="0" ax="-0.67712" ay="-0.20373" az="-0.70711" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="4"  ox="0.013768" oy="0.0" oz="0.039415" roll="1.5708" pitch="0" yaw="0" ax="-0.66755" ay="0.23318" az="0.70711" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="5"  ox="0.034306" oy="0.0" oz="0.023795" roll="1.5708" pitch="0.0" yaw="0.0" ax="0" ay="0.70710678" az="0.70711" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="6"  ox="0.04174" oy="0.0" oz="-0.00091413" roll="1.5708" pitch="0" yaw="0" ax="0.015482" ay="0.70694" az="0.70711" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="7"  ox="0.033231" oy="0.0" oz="-0.025274" roll="1.5708" pitch="0" yaw="0" ax="0.42805" ay="0.56282" az="0.70711" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="8"  ox="0.012029" oy="0.0" oz="-0.03998" roll="1.5708" pitch="0" yaw="0" ax="0.67712" ay="0.20373" az="0.70711" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="9"  ox="-0.013768" oy="0.0" oz="-0.039415" roll="1.5708" pitch="0" yaw="0" ax="0.66755" ay="-0.23318" az="0.70711" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:rubber_wheel frnt_or_bk="front" lft_or_rght="left" number="10"  ox="-0.034306" oy="0.0" oz="-0.023795" roll="1.5708" pitch="0" yaw="0" ax="0.403" ay="-0.58102" az="-0.70711" />
+
+
+
+
+</robot>

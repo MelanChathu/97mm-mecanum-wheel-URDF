@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot name="heale" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+<!-- Wheels macro ******************************************************************************************-->
+    <xacro:macro name="wheel_1" params="fl_or_br">
+        <!-- Wheel link -->
+        <link name="${fl_or_br}_wheel">
+            <inertial>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+                <mass value="0.1" />
+                <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01" />
+            </inertial>
+            <visual name="">
+                <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0" />
+                <geometry>
+                    <!-- <mesh filename="package://mecanum_description/meshes/left_wheel.STL" /> -->
+                    <cylinder radius="0.033253505" length="0.05332" />
+                </geometry>
+                <material name="blue">
+                    <color rgba="0.2 0.2 1 1"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0" />
+                <geometry>
+                    <cylinder radius="0.033253505" length="0.05332" />
+                </geometry>
+            </collision>
+        </link>
+
+    </xacro:macro>
+
+
+</robot>

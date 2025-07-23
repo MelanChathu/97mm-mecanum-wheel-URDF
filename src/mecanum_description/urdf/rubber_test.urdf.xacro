@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<robot name="heale" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+    <!-- Rubber Wheel link -->
+    <link name="rubber_wheel">
+      <inertial>
+        <origin xyz="-9.3675E-17 -1.0686E-15 1.3045E-15" rpy="0 0 0" />
+        <mass value="0.0052688" />
+        <inertia
+          ixx="7.0476E-07" ixy="-5.6311E-09" ixz="5.6325E-09"
+          iyy="4.4776E-07" iyz="2.5718E-07" izz="4.4764E-07" />
+      </inertial>
+
+      <visual>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0.7854 " />
+        <geometry>
+          <mesh filename="package://mecanum_description/meshes/rubber_wheel.STL" />
+        </geometry>
+        <material name="blue">
+          <color rgba="0.2 0.2 1 1"/>
+        </material>
+      </visual>
+
+      <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        <geometry>
+          <mesh filename="package://mecanum_description/meshes/rubber_wheel.STL" />
+        </geometry>
+      </collision>
+    </link>
+    front-left wheel****************************************************************************************************
+    <xacro:roller frnt_or_bk="front" lft_or_rght="left" number="1" x="0" z="0.03833567" p="0.0785398" y="0" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:roller frnt_or_bk="front" lft_or_rght="left" number="2"  x="0.02464169" z="0.02936683" p="0.0785398" y="0.698132" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:roller frnt_or_bk="front" lft_or_rght="left" number="3"  x="0.03775327" z="0.00665692" p="0.0785398" y="1.396263" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:roller frnt_or_bk="front" lft_or_rght="left" number="4"  x="0.03319966" z="-0.01916784" p="0.0785398" y="2.094395" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:roller frnt_or_bk="front" lft_or_rght="left" number="5"  x="0.01311157" z="-0.03602375" p="0.0785398" y="2.792527" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:roller frnt_or_bk="front" lft_or_rght="left" number="6"  x="-0.01311157" z="-0.03602375" p="0.0785398" y="3.490659" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:roller frnt_or_bk="front" lft_or_rght="left" number="7"  x="-0.03319966" z="-0.01916784" p="0.0785398" y="4.18879" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:roller frnt_or_bk="front" lft_or_rght="left" number="8"  x="-0.03775327" z="0.00665692" p="0.0785398" y="4.886922" />
+
+    <!--front-left wheel**************************************************************************************************** -->
+    <xacro:roller frnt_or_bk="front" lft_or_rght="left" number="9"  x="-0.02464169" z="0.02936683" p="0.0785398" y="5.585054" />
+
+</robot>
