@@ -1,7 +1,7 @@
 # 97mm-mecanum-wheel-URDF
  This repository contains the URDF model and RViz2 display launch files for 97mm diameter 9 rollers Mecanum wheels. It is designed for use with ROS 2 (Humble) and can be easily integrated into simulation or visualization workflows.
 
- This URDF includes a basic model of  ecanum wheels as shown below.
+ This URDF includes a basic model for mecanum wheels as shown below.
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/5fa8b89e-f9af-4e81-ba7d-94c321aee49a" />
 
 # For Visualization
